@@ -47,7 +47,7 @@ function setScore(valueToUpdate) {
 }
 
 function getScore() {
-    return `Die 1 has -> ${die1Wins} wins. \nDie 2 has -> ${die2Wins} wins. Number of draws -> ${draws}`;
+    return `Die 1 has -> <b>${die1Wins}</b> wins. </br>Die 2 has -> <b>${die2Wins}</b> wins. </br>Number of draws -> <b>${draws}</b>.`;
 }
 
 function changeDiceBackground(die1Value, die2Value) {
@@ -76,6 +76,7 @@ function rollSomeDice() {
 
     cleanupPage()
 
+    // surely this can be refactored / cleaned up
     if (die1Value === 1) {
         document.getElementById("firstDieImg").src = "../image-asserts/1.png";
     }
@@ -118,4 +119,13 @@ function rollSomeDice() {
 function afterRoll(die1Value, die2Value) {
     changeDiceBackground(die1Value, die2Value);
     document.getElementById("results").innerHTML = getScore();
+}
+
+function pageRefreshWarning() {
+    window.addEventListener('beforeunload', function (e) {
+        // Cancel the event
+        e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+        // Chrome requires returnValue to be set
+        e.returnValue = 'Score will be reset.\nAre you sure?';
+    });
 }

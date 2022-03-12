@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <title>Dice Roll</title>
     <link rel="stylesheet" href="style.css">
-    <script src="../dice.js"></script>
+    <script src="../controllers/dice.js"></script>
 </head>
 <body onload="setupPage()">
 
-<div id="container" class="imageContainer">
-
-</div>
+<div id="container" class="imageContainer"></div>
 
 </br>
 <p id="results"><strong></strong></p>
 <div class="buttonContainer">
     <button onclick="rollSomeDice()">Roll your 2 dice</button>
     <a href="table.html">
-        <button>Back to Table</button>
+        <button onclick="pageRefreshWarning()">Back to Table</button>
     </a>
 </div>
 </body>
