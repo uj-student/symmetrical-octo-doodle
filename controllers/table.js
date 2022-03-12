@@ -19,11 +19,5 @@ function getNumberOfMarriedPeople() {
 }
 
 function showAlert(idElement, func) {
-    let pressedButton = document.getElementById(idElement)
-    pressedButton.addEventListener("click", function (event) {
-                alert(func)
-            }//, {once: true}
-    )
+    alert(func)
 }
-
-// look into first click not working. Probably browser related.

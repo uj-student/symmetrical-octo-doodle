@@ -39,20 +39,19 @@ td.marriageField {
 }
 
 .diceImage {
-    position: center;
+    position: relative;
     align-content: center;
-    padding: 10px;
     width: 100%;
+    object-fit: contain;
+
 }
 
 .imageContainer {
-    width: 100%;
+    margin: auto;
     text-align: center;
     display: flex;
-    vertical-align:middle;
-    padding: 50px;
 }
 
-.buttonContainer {
-    width: 100%;
-}
+/*.buttonContainer {*/
+/*    width: 100%;*/
+/*}*/
